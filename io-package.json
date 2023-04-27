@@ -1,0 +1,104 @@
+{
+    "common": {
+        "name": "enpal_solar_information",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "ENPAL Solar Information",
+        "titleLang": {
+            "en": "ENPAL Solar Information",
+            "de": "ENPAL Solarinformationen",
+            "ru": "ENPAL Солнечная информация",
+            "pt": "ENPAL Informação Solar",
+            "nl": "ENPAL Zonne-informatie",
+            "fr": "Informations solaires ENPAL",
+            "it": "ENPAL Informazioni Solari",
+            "es": "Información Solar ENPAL",
+            "pl": "Informacje o energii słonecznej ENPAL",
+            "uk": "ENPAL Сонячна інформація",
+            "zh-cn": "ENPAL 太阳能信息"
+        },
+        "desc": {
+            "en": "Catch all information from the Enpal Solar Infopage",
+            "de": "Holen Sie sich alle Informationen auf der Enpal Solar Infoseite",
+            "ru": "Получите всю информацию с информационной страницы Enpal Solar",
+            "pt": "Obtenha toda a informação na Infopage da Enpal Solar",
+            "nl": "Vang alle informatie van de Enpal Solar Infopagina",
+            "fr": "Attrapez toutes les informations de la page d'information Enpal Solar",
+            "it": "Cattura tutte le informazioni dalla Infopage Enpal Solar",
+            "es": "Obtenga toda la información de la página de información de Enpal Solar",
+            "pl": "Złap wszystkie informacje ze strony informacyjnej Enpal Solar",
+            "uk": "Отримайте всю інформацію з інформаційної сторінки Enpal Solar",
+            "zh-cn": "从 Enpal 太阳能信息页面获取所有信息"
+        },
+        "authors": ["Florian Carstens <florian@carstens.tv>"],
+        "keywords": ["enpal", "solar"],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "enpal_solar_information.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Flonicar/ioBroker.enpal_solar_information/main/admin/enpal_solar_information.png",
+        "readme": "https://github.com/Flonicar/ioBroker.enpal_solar_information/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "energy",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "materialize"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
